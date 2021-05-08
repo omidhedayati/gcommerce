@@ -1,3 +1,6 @@
-const Logo = ({ className = '', ...props }) => <img src={"[<https://icon-library.com/images/icon-clothing/icon-clothing-4.jpg>](<https://icon-library.com/images/icon-clothing/icon-clothing-4.jpg>)"} width="40" height="40" alt="Logo" />
-
-export default Logo
+import Image from 'next/image';
+import img from "./img.png";
+export const Profile = () => (
+  <Image src="https://set-city.com/wp-content/uploads/2021/02/SETCITY.png" alt="my picture" width={1200} height={900} />
+);
+export default Profile;
