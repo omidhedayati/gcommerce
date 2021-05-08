@@ -7,6 +7,10 @@ const {
 const provider = commerce.provider || getProviderName()
 const isBC = provider === 'bigcommerce'
 const isShopify = provider === 'shopify'
+const withImages = require('next-images')
+module.exports = withImages({
+  inlineImageLimit: false
+})
 
 module.exports = withCommerceConfig({
   commerce,
