@@ -1,6 +1,7 @@
-import Image from 'next/image';
 import img from "./img.png";
+declare var require: any
 export const Profile = () => (
-  <Image src="https://set-city.com/wp-content/uploads/2021/02/SETCITY.png" alt="my picture" width={1200} height={900} />
+  <img src={require("https://set-city.com/wp-content/uploads/2021/02/SETCITY.png").default}/>
 );
 export default Profile;
+
