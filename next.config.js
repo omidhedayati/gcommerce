@@ -46,3 +46,10 @@ module.exports = withCommerceConfig({
 
 // Don't delete this console log, useful to see the commerce config in Vercel deployments
 console.log('next.config.js', JSON.stringify(module.exports, null, 2))
+const withImages = require('next-images')
+module.exports = withImages({
+  fileExtensions: ["jpg", "jpeg", "png", "gif"],
+  webpack(config, options) {
+    return config
+  }
+})
